@@ -1,0 +1,43 @@
+# ECOS Solver for Java Native Libraries
+
+[![Build](https://github.com/atraplet/ecos4j-native/actions/workflows/build.yml/badge.svg)](https://github.com/atraplet/ecos4j/actions/workflows/build.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/com.ustermetrics/ecos4j-native)](https://mvnrepository.com/artifact/com.ustermetrics/ecos4j)
+[![GPLv3 licensed](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/atraplet/ecos4j/blob/master/LICENSE)
+
+ecos4j-native (ECOS Solver for Java Native Libraries) contains the shared library release binaries
+of [ECOS](https://github.com/embotech/ecos) such that they may be used by [ecos4j](https://github.com/atraplet/ecos4j).
+
+## Usage
+
+### Dependency
+
+Add the latest version from [Maven central](https://mvnrepository.com/artifact/com.ustermetrics/ecos4j-native) to
+your `pom.xml`
+
+```
+<dependency>
+    <groupId>com.ustermetrics</groupId>
+    <artifactId>ecos4j-native</artifactId>
+    <version>x.y.z</version>
+    <scope>runtime</scope>
+</dependency>
+```
+
+## Build
+
+## Release
+
+Update the version in the `pom.xml`, create a tag, and push it by running
+
+```
+export VERSION=X.Y.Z
+vi RELEASE.md
+git checkout --detach HEAD
+sed -i -E "s/<version>[0-9]+\-SNAPSHOT<\/version>/<version>$VERSION<\/version>/g" pom.xml
+git add RELEASE.md
+git commit -p -m "v$VERSION" pom.xml RELEASE.md
+git tag v$VERSION
+git push origin v$VERSION
+```
+
+This will trigger the upload of the package to Maven Central via GitHub Actions.
