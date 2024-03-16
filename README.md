@@ -5,7 +5,7 @@
 [![GPLv3 licensed](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/atraplet/ecos4j/blob/master/LICENSE)
 
 ecos4j-native (ECOS Solver for Java Native Libraries) contains the shared library release binaries
-of [ECOS](https://github.com/embotech/ecos) such that they may be used by [ecos4j](https://github.com/atraplet/ecos4j).
+of [ECOS](https://github.com/embotech/ecos) for [ecos4j](https://github.com/atraplet/ecos4j).
 
 ## Usage
 
