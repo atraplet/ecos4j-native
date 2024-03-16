@@ -23,6 +23,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        env:
-          LD_LIBRARY_PATH: ./
-        run: mvn -B clean verify --file pom.xml
+        run: mvn -X -B clean verify --file pom.xml
