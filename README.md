@@ -30,7 +30,8 @@ your `pom.xml`
 Update the version in the `pom.xml`, create a tag, and push it by running
 
 ```
-export VERSION=X.Y.Z
+export ECOS_VERSION=X.Y.Z
+export VERSION=X.Y.Z-$ECOS_VERSION
 vi RELEASE.md
 git checkout --detach HEAD
 sed -i -E "s/<version>[0-9]+\-SNAPSHOT<\/version>/<version>$VERSION<\/version>/g" pom.xml
