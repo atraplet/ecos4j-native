@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/atraplet/ecos4j-native/actions/workflows/build.yml/badge.svg)](https://github.com/atraplet/ecos4j-native/actions/workflows/build.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.ustermetrics/ecos4j-native)](https://mvnrepository.com/artifact/com.ustermetrics/ecos4j-native)
-[![GPLv3 licensed](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/atraplet/ecos4j/blob/master/LICENSE)
+[![GPLv3 licensed](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/atraplet/ecos4j-native/blob/master/LICENSE)
 
 ecos4j-native (ECOS Solver for Java Native Libraries) contains the shared library release binaries
 of [ECOS](https://github.com/embotech/ecos) for [ecos4j](https://github.com/atraplet/ecos4j).
