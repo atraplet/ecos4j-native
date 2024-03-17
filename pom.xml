@@ -13,18 +13,15 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <git.repository>https://github.com/atraplet/${project.artifactId}</git.repository>
         <natives.dir>src/main/resources/natives</natives.dir>
-        <natives.lib.name>ecos</natives.lib.name>
         <natives.lib.version>2.0.10</natives.lib.version>
-        <natives.download.url>https://github.com/atraplet/${natives.lib.name}/releases/download</natives.download.url>
-        <natives.lib.md5.dll>5c91bae5df84b66926f169427aa93f77</natives.lib.md5.dll>
-        <natives.lib.md5.so>7b69536d209d7be3565b987499bad313</natives.lib.md5.so>
-        <git.repository>atraplet/${project.artifactId}</git.repository>
+        <natives.download.url>https://github.com/atraplet/ecos/releases/download</natives.download.url>
     </properties>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>ECOS Solver for Java Native Libraries</description>
-    <url>https://github.com/${git.repository}</url>
+    <url>${git.repository}</url>
 
     <licenses>
         <license>
@@ -43,9 +40,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/${git.repository}.git</connection>
-        <developerConnection>scm:git:https://github.com/${git.repository}.git</developerConnection>
-        <url>https://github.com/${git.repository}/tree/master</url>
+        <connection>scm:git:${git.repository}.git</connection>
+        <developerConnection>scm:git:${git.repository}.git</developerConnection>
+        <url>${git.repository}/tree/master</url>
     </scm>
 
     <distributionManagement>
@@ -83,7 +80,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>src/main/resources/natives</directory>
+                            <directory>${natives.dir}</directory>
                             <includes>
                                 <include>linux_64/*</include>
                                 <include>windows_64/*</include>
@@ -98,27 +95,27 @@
                 <version>1.8.1</version>
                 <executions>
                     <execution>
-                        <id>download so</id>
+                        <id>download libecos.so</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>wget</goal>
                         </goals>
                         <configuration>
-                            <url>${natives.download.url}/v${natives.lib.version}/lib${natives.lib.name}.so</url>
+                            <url>${natives.download.url}/v${natives.lib.version}/libecos.so</url>
                             <outputDirectory>${project.basedir}/${natives.dir}/linux_64</outputDirectory>
-                            <md5>${natives.lib.md5.so}</md5>
+                            <md5>7b69536d209d7be3565b987499bad313</md5>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>download dll</id>
+                        <id>download ecos.dll</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>wget</goal>
                         </goals>
                         <configuration>
-                            <url>${natives.download.url}/v${natives.lib.version}/${natives.lib.name}.dll</url>
+                            <url>${natives.download.url}/v${natives.lib.version}/ecos.dll</url>
                             <outputDirectory>${project.basedir}/${natives.dir}/windows_64</outputDirectory>
-                            <md5>${natives.lib.md5.dll}</md5>
+                            <md5>5c91bae5df84b66926f169427aa93f77</md5>
                         </configuration>
                     </execution>
                 </executions>
