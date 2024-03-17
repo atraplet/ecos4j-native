@@ -11,7 +11,7 @@ of [ECOS](https://github.com/embotech/ecos) for [ecos4j](https://github.com/atra
 
 ### Dependency
 
-Add the latest version from [Maven central](https://central.sonatype.com/artifact/com.ustermetrics/ecos4j-native) to
+Add the latest version from [Maven Central](https://central.sonatype.com/artifact/com.ustermetrics/ecos4j-native) to
 your `pom.xml`
 
 ```
