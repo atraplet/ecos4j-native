@@ -90,6 +90,25 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>regex-property</id>
+                        <goals>
+                            <goal>regex-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>module.name</name>
+                            <value>${project.artifactId}</value>
+                            <regex>-</regex>
+                            <replacement>_</replacement>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>com.googlecode.maven-download-plugin</groupId>
                 <artifactId>download-maven-plugin</artifactId>
                 <version>1.8.1</version>
@@ -127,7 +146,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Automatic-Module-Name>com.ustermetrics.ecos4j_native</Automatic-Module-Name>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <Automatic-Module-Name>${project.groupId}.${module.name}</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
                 </configuration>
