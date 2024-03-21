@@ -1,4 +1,4 @@
-package com.ustermetrics.ecos4j;
+package com.ustermetrics.ecos4j_native;
 
 import org.junit.jupiter.api.Test;
 import org.scijava.nativelib.NativeLoader;
