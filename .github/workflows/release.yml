@@ -40,6 +40,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: Release ${{ github.ref }}
           generate_release_notes: true
           body_path: RELEASE.md
