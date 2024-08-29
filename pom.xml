@@ -84,6 +84,7 @@
                             <includes>
                                 <include>linux_64/*</include>
                                 <include>windows_64/*</include>
+                                <include>osx_arm64/*</include>
                             </includes>
                         </fileset>
                     </filesets>
@@ -122,7 +123,7 @@
                         <configuration>
                             <url>${natives.download.url}/v${natives.lib.version}/libecos.so</url>
                             <outputDirectory>${project.basedir}/${natives.dir}/linux_64</outputDirectory>
-                            <md5>7b69536d209d7be3565b987499bad313</md5>
+                            <sha256>128d79880ae217cc460ce34f35916a3aa7dd333192362a7f2ad89ed27a0f2b9a</sha256>
                         </configuration>
                     </execution>
                     <execution>
@@ -134,7 +135,19 @@
                         <configuration>
                             <url>${natives.download.url}/v${natives.lib.version}/ecos.dll</url>
                             <outputDirectory>${project.basedir}/${natives.dir}/windows_64</outputDirectory>
-                            <md5>5c91bae5df84b66926f169427aa93f77</md5>
+                            <sha256>e45a67c78b69697858a78ce6152912ba6577d6c792612d23e64e04017efdf08b</sha256>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>download libecos.dylib</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>${natives.download.url}/v${natives.lib.version}/libecos.dylib</url>
+                            <outputDirectory>${project.basedir}/${natives.dir}/osx_arm64</outputDirectory>
+                            <sha256>5c6a73c9c384d37dfb6d8f9be6cd806eab72ff20cdc801c287aa5e845a7b1395</sha256>
                         </configuration>
                     </execution>
                 </executions>
