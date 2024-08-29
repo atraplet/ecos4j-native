@@ -124,3 +124,4 @@ fabric.properties
 
 /src/main/resources/natives/windows_64/ecos.dll
 /src/main/resources/natives/linux_64/libecos.so
+/src/main/resources/natives/osx_arm64/libecos.dylib
