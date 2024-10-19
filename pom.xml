@@ -12,6 +12,7 @@
         <java.version>23</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.proc>full</maven.compiler.proc>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <git.repository>https://github.com/atraplet/${project.artifactId}</git.repository>
         <natives.dir>src/main/resources/natives</natives.dir>
