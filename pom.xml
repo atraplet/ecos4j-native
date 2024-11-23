@@ -136,7 +136,7 @@
                         <configuration>
                             <url>${natives.download.url}/v${natives.lib.version}/ecos.dll</url>
                             <outputDirectory>${project.basedir}/${natives.dir}/windows_64</outputDirectory>
-                            <sha256>e45a67c78b69697858a78ce6152912ba6577d6c792612d23e64e04017efdf08b</sha256>
+                            <sha256>a5c98a19691c1e08b39e234f90a083700c0d4b8e844b5f34caca349cf28c40b6</sha256>
                         </configuration>
                     </execution>
                     <execution>
