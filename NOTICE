@@ -1,0 +1,11 @@
+ECOS Solver for Java Native Libraries
+Copyright (C) 2022-2024 Uster Metrics GmbH, Steinstrasse 9B,
+CH-8610 Uster, Switzerland, info@ustermetrics.com, www.ustermetrics.com
+
+The following components are bundled in this library:
+
+Shared library release binaries of ECOS
+Copyright (C) 2012-2015 A. Domahidi, Automatic Control Lab, ETH Zurich
+and embotech AG, CH-8005 Zurich, Switzerland, domahidi@embotech.com
+and others, github.com/embotech/ecos
+Licensed under the GNU General Public License, version 3 or later
